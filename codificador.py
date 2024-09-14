@@ -11,17 +11,40 @@
 # 1 // 2 = 0, el bucle termina.
 # Se devuelve "101".
 
+import os
 
-def decimal_a_binario(numero):
-  binario = ""
-  while numero > 0:
-    binario = str(numero % 2) + binario
-    numero //= 2
-  return binario if binario else "0"
+while True:
+    os.system('cls')
+    # Solicitar el número al usuario
+    numero = input("Ingrese un número: ")
 
-# Solicitar el número al usuario
-numero_decimal = int(input("Ingrese un número entero: "))
+    # validamos que valor ingresado sea un número positivo 
+    while not (numero.isdigit() and int(numero) <= 10):
+        print("Por favor, ingrese un número válido.")
+        numero = input("Ingrese el primer número: ")
 
-# Convertir y mostrar el resultado
-resultado = decimal_a_binario(numero_decimal)
-print(f"El número {numero_decimal} en binario es: {resultado}")
+
+    # Convertir el valor a entero
+    numero = int(numero)
+
+    # guardamos el valor para mostrarlo al final
+    valor = numero
+
+    # Convertir el número decimal a binario
+    binario = ""
+
+    while numero > 0:
+        binario = str(numero % 2) + binario
+        numero //= 2
+
+    # Manejar el caso en que el número es 0
+    if not binario:
+        binario = "0"
+
+    # Mostrar el resultado
+    print(f"El número {valor} en binario es: {binario}")
+
+    # Preguntar si desea continuar
+    continuar = input("¿Desea continuar? (s/n): ")
+    if continuar.lower() != 's':
+        break
