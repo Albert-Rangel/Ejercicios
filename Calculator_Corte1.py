@@ -104,7 +104,7 @@ while True:
                     entrada = input("Ingrese el exponente: ".rjust(30))
                     if entrada.strip() == "":
                         break
-                    exponente = float(entrada)
+                    exponente = int(entrada)
                     entrada=""
 
                 elif opcion == '6':
