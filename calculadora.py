@@ -1,4 +1,11 @@
 #Programación numérica y no numérica-tarea 1
+
+#MATERIA - TAREA N°1
+
+     #ALBERT RANGEL - DCN0501IIV1
+     #ANDERSON ESCOBAR - DCN0501IIV1
+
+
 import os
 
 # Inicializamos las variables
