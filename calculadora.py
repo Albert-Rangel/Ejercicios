@@ -53,7 +53,7 @@ while True:
     # Solicitamos la opción al usuario
     opcion = input("Selecciona una opción: ".rjust(30))
 
-    # si la opción es 7, salimos del bucle
+    # si la opción es 7, salimos del bucle1
     if opcion == '7':
         print("")
         print("""
